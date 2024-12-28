@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { FaQuestionCircle, FaPlane, FaHotel } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { FaQuestionCircle, FaPlane, FaHotel } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,30 +11,34 @@ const Header = () => {
           {/* Left: Logo */}
           <div className="flex items-center">
             <Link to="/">
-            <img src="/assets/logo-main.png" alt="SkyPlane" className="h-12 w-36" />
+              <img
+                src="/assets/logo-main.png"
+                alt="SkyPlane"
+                className="h-12 w-36"
+              />
             </Link>
           </div>
 
           {/* Right: Desktop Menu */}
           <div className="hidden md:flex space-x-6 items-center">
-            <div className="flex items-center space-x-2">
-              <FaHotel className="text-lg text-gray-600" />
-              <Link to="/hotels" className="text-gray-600">
-              <span className="text-gray-600">Hotels</span>
-              </Link>
-            </div>
-            <div className="flex items-center space-x-2">
-            <Link to="/">
-              <FaPlane className="text-lg text-gray-600" />
-              <span className="text-gray-600">Flights</span>
-              </Link>
-            </div>
-            <Link to="/contact-us">
-            <button className="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700">
-              Contact
-            </button>
+            <Link to="/hotels" className="text-gray-600">
+              <div className="flex items-center space-x-2">
+                <FaHotel className="text-lg text-gray-600" />
+
+                <span className="text-gray-600">Hotels</span>
+              </div>
             </Link>
-           
+            <Link to="/">
+              <div className="flex items-center space-x-2">
+                <FaPlane className="text-lg text-gray-600" />
+                <span className="text-gray-600">Flights</span>
+              </div>
+            </Link>
+            <Link to="/contact-us">
+              <button className="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700">
+                Contact
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,7 +78,7 @@ const Header = () => {
       {/* Mobile Menu */}
       <div
         className={`fixed inset-0 bg-black bg-opacity-75 z-50 transform ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+          isOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
         <div className="flex justify-end p-4">
@@ -99,12 +103,11 @@ const Header = () => {
           </button>
         </div>
         <div className="flex flex-col items-center justify-center h-full space-y-6">
-          
           <div className="flex items-center space-x-2">
-          <Link to="/hotels">
-            <FaHotel className="text-xl text-white" />
-            <span className="text-white text-lg">Hotels</span>
-             </Link>
+            <Link to="/hotels">
+              <FaHotel className="text-xl text-white" />
+              <span className="text-white text-lg">Hotels</span>
+            </Link>
           </div>
           <div className="flex items-center space-x-2">
             <FaPlane className="text-xl text-white" />
@@ -120,4 +123,3 @@ const Header = () => {
 };
 
 export default Header;
-
