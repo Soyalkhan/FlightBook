@@ -7,7 +7,7 @@ const BannerBottom = () => {
 <div
       className="relative bg-cover bg-center rounded-[30px] overflow-hidden shadow-md p-6 md:p-16"
       style={{
-        backgroundImage: "url('/src/assets/banner2.jpg')", // Replace with the actual image path
+        backgroundImage: "url('/assets/banner2.jpg')", // Replace with the actual image path
         minHeight: "200px",
       }}
     >

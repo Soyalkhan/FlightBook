@@ -2,14 +2,14 @@ import React from "react";
 
 const PopularRoutes = () => {
   const routes = [
-    { id: 1, city: "Madrid", price: "From $30", image: "/src/assets/r1.jpg" },
-    { id: 2, city: "Oslo", price: "From $80", image: "/src/assets/r2.jpg" },
-    { id: 3, city: "Doha", price: "From $380", image: "/src/assets/r3.jpg" },
-    { id: 4, city: "New Jercy", price: "From $190", image: "/src/assets/r4.jpg" },
-    { id: 5, city: "Delhi", price: "From $180", image: "/src/assets/r5.jpg" },
-    { id: 6, city: "Bandglore", price: "From $160", image: "/src/assets/r6.jpg" },
-    { id: 7, city: "Chaina", price: "From $130", image: "/src/assets/r7.jpg" },
-    { id: 8, city: "Chaina", price: "From $2500", image: "/src/assets/r8.jpg" },
+    { id: 1, city: "Madrid", price: "From $30", image: "/assets/r1.jpg" },
+    { id: 2, city: "Oslo", price: "From $80", image: "/assets/r2.jpg" },
+    { id: 3, city: "Doha", price: "From $380", image: "/assets/r3.jpg" },
+    { id: 4, city: "New Jercy", price: "From $190", image: "/assets/r4.jpg" },
+    { id: 5, city: "Delhi", price: "From $180", image: "/assets/r5.jpg" },
+    { id: 6, city: "Bandglore", price: "From $160", image: "/assets/r6.jpg" },
+    { id: 7, city: "Chaina", price: "From $130", image: "/assets/r7.jpg" },
+    { id: 8, city: "Chaina", price: "From $2500", image: "/assets/r8.jpg" },
   ];
 
   return (

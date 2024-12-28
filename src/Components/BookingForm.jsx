@@ -118,46 +118,38 @@
 // };
 
 // export default BookingForm;
-
 import React, { useState } from "react";
 import { Autocomplete, TextField } from "@mui/material";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaPlane } from "react-icons/fa";
 
 const predefinedCities = [
-  "Agartala - Maharaja Bir Bikram Airport (IXA)",
-  "Agra - Pandit Deen Dayal Upadhyay Airport (AGR)",
-  "Ahmedabad - Sardar Vallabhbhai Patel International Airport (AMD)",
-  "Aizawl - Lengpui Airport (AJL)",
-  "Amritsar - Sri Guru Ram Dass Jee International Airport (ATQ)",
-  "Bagdogra - Bagdogra Airport (IXB)",
-  "Bangalore - Kempegowda International Airport (BLR)",
-  "Mumbai - Chhatrapati Shivaji Maharaj International Airport (BOM)",
-  "Los Angeles - Los Angeles International Airport (LAX)",
-  "New York - John F. Kennedy International Airport (JFK)",
-  "London - Heathrow Airport (LHR)",
-  "Paris - Charles de Gaulle Airport (CDG)",
-  "Dubai - Dubai International Airport (DXB)",
-  "Singapore - Changi Airport (SIN)",
+  { name: "Agartala - Maharaja Bir Bikram Airport (IXA)", city: "Agartala" },
+  { name: "Agra - Pandit Deen Dayal Upadhyay Airport (AGR)", city: "Agra" },
+  { name: "Ahmedabad - Sardar Vallabhbhai Patel International Airport (AMD)", city: "Ahmedabad" },
+  { name: "Aizawl - Lengpui Airport (AJL)", city: "Aizawl" },
+  { name: "Amritsar - Sri Guru Ram Dass Jee International Airport (ATQ)", city: "Amritsar" },
+  { name: "Bagdogra - Bagdogra Airport (IXB)", city: "Bagdogra" },
+  { name: "Bangalore - Kempegowda International Airport (BLR)", city: "Bangalore" },
+  { name: "Mumbai - Chhatrapati Shivaji Maharaj International Airport (BOM)", city: "Mumbai" },
+  { name: "Los Angeles - Los Angeles International Airport (LAX)", city: "Los Angeles" },
+  { name: "New York - John F. Kennedy International Airport (JFK)", city: "New York" },
+  { name: "London - Heathrow Airport (LHR)", city: "London" },
+  { name: "Paris - Charles de Gaulle Airport (CDG)", city: "Paris" },
+  { name: "Dubai - Dubai International Airport (DXB)", city: "Dubai" },
+  { name: "Singapore - Changi Airport (SIN)", city: "Singapore" },
 ];
-
-const uniquePredefinedCities = Array.from(new Set(predefinedCities));
 
 const BookingForm = () => {
   const [tripType, setTripType] = useState("round-trip");
   const [passengers, setPassengers] = useState(1);
-  const [from, setFrom] = useState("");
-  const [to, setTo] = useState("");
+  const [from, setFrom] = useState(null);
+  const [to, setTo] = useState(null);
   const [departureDate, setDepartureDate] = useState("");
   const [returnDate, setReturnDate] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSendEnquiry = () => {
-    if (
-      !from ||
-      !to ||
-      !departureDate ||
-      (tripType === "round-trip" && !returnDate)
-    ) {
+    if (!from || !to || !departureDate || (tripType === "round-trip" && !returnDate)) {
       setMessage("Please fill all required fields.");
       return;
     }
@@ -167,17 +159,15 @@ const BookingForm = () => {
     const whatsappMessage = `Enquiry Details:
 
 Trip Type: ${tripType}
-From: ${from}
-To: ${to}
+From: ${from.name}
+To: ${to.name}
 Departure: ${departureDate}
 ${
   tripType === "round-trip" ? `Return: ${returnDate}\n` : ""
 }Passengers: ${passengers}
 Date of Enquiry: ${enquiryDate}`;
 
-    const whatsappUrl = `https://wa.me/7535964612?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
+    const whatsappUrl = `https://wa.me/7535964612?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, "_blank");
 
     setMessage("Enquiry sent successfully!");
@@ -192,9 +182,7 @@ Date of Enquiry: ${enquiryDate}`;
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 justify-center">
           {/* Trip Type */}
           <div className="col-span-1">
-            <label className="text-gray-700 font-medium block mb-2">
-              Trip Type
-            </label>
+            <label className="text-gray-700 font-medium block mb-2">Trip Type</label>
             <select
               value={tripType}
               onChange={(e) => setTripType(e.target.value)}
@@ -209,14 +197,19 @@ Date of Enquiry: ${enquiryDate}`;
           <div className="col-span-2">
             <label className="text-gray-700 font-medium block mb-2">From</label>
             <Autocomplete
-              options={uniquePredefinedCities}
-              filterOptions={(options, { inputValue }) =>
-                options.filter((option) =>
-                  option.toLowerCase().includes(inputValue.toLowerCase())
-                )
-              }
+              options={predefinedCities}
+              getOptionLabel={(option) => option.name}
+              renderOption={(props, option) => (
+                <li {...props} className="flex items-center gap-2">
+                  <FaPlane className="text-teal-600" />
+                  <div>
+                    <div>{option.name}</div>
+                    <div className="text-gray-500 text-sm">{option.city}</div>
+                  </div>
+                </li>
+              )}
               value={from}
-              onInputChange={(event, newValue) => setFrom(newValue)}
+              onChange={(event, newValue) => setFrom(newValue)}
               renderInput={(params) => (
                 <TextField
                   {...params}
@@ -232,14 +225,19 @@ Date of Enquiry: ${enquiryDate}`;
           <div className="col-span-2">
             <label className="text-gray-700 font-medium block mb-2">To</label>
             <Autocomplete
-              options={uniquePredefinedCities}
-              filterOptions={(options, { inputValue }) =>
-                options.filter((option) =>
-                  option.toLowerCase().includes(inputValue.toLowerCase())
-                )
-              }
+              options={predefinedCities}
+              getOptionLabel={(option) => option.name}
+              renderOption={(props, option) => (
+                <li {...props} className="flex items-center gap-2 ">
+                  <FaPlane className="text-teal-600" />
+                  <div className="">
+                    <div>{option.name}</div>
+                    <div className="text-gray-500 text-sm">{option.city}</div>
+                  </div>
+                </li>
+              )}
               value={to}
-              onInputChange={(event, newValue) => setTo(newValue)}
+              onChange={(event, newValue) => setTo(newValue)}
               renderInput={(params) => (
                 <TextField
                   {...params}
@@ -255,9 +253,7 @@ Date of Enquiry: ${enquiryDate}`;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           {/* Departure Date */}
           <div className="col-span-1">
-            <label className="text-gray-700 font-medium block mb-2">
-              Departure
-            </label>
+            <label className="text-gray-700 font-medium block mb-2">Departure</label>
             <input
               type="date"
               value={departureDate}
@@ -269,9 +265,7 @@ Date of Enquiry: ${enquiryDate}`;
           {/* Return Date */}
           {tripType === "round-trip" && (
             <div className="col-span-1">
-              <label className="text-gray-700 font-medium block mb-2">
-                Return
-              </label>
+              <label className="text-gray-700 font-medium block mb-2">Return</label>
               <input
                 type="date"
                 value={returnDate}
@@ -284,15 +278,13 @@ Date of Enquiry: ${enquiryDate}`;
 
         {/* Passengers */}
         <div className="mt-4">
-          <label className="text-gray-700 font-medium block mb-2">
-            Passengers
-          </label>
+          <label className="text-gray-700 font-medium block mb-2">Passengers</label>
           <select
             value={passengers}
             onChange={(e) => setPassengers(e.target.value)}
             className="w-full border-r border-l border-gray-300 p-2 rounded-md focus:outline-none placeholder-gray-500 focus:ring-2 focus:ring-teal-600"
           >
-            {Array.from({ length: 4 }, (_, i) => (
+            {Array.from({ length: 10 }, (_, i) => (
               <option key={i + 1} value={i + 1}>
                 {i + 1} {i + 1 === 1 ? "Passenger" : "Passengers"}
               </option>
@@ -306,14 +298,12 @@ Date of Enquiry: ${enquiryDate}`;
             onClick={handleSendEnquiry}
             className="bg-teal-600 text-white p-4 rounded-md hover:bg-teal-700 flex items-center"
           >
-            <span className="mr-2">Send enquiry</span>{" "}
+            <span className="mr-2">Send enquiry</span>
             <FaWhatsapp className="text-lg" />
           </button>
         </div>
 
-        {message && (
-          <p className="text-center text-green-600 mt-4">{message}</p>
-        )}
+        {message && <p className="text-center text-green-600 mt-4">{message}</p>}
       </div>
     </div>
   );

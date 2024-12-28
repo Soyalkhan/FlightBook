@@ -47,7 +47,7 @@
 //       {/* Hero Section */}
 //       <div
 //         className="relative h-96 bg-cover bg-center flex items-center justify-center"
-//         style={{ backgroundImage: "url('/src/assets/planimagebanner.jpg')" }}
+//         style={{ backgroundImage: "url('/assets/planimagebanner.jpg')" }}
 //       >
 //         <h1 className="text-white text-4xl font-bold">Best deals are waiting for you</h1>
 //       </div>
@@ -164,7 +164,7 @@ const Header = () => {
           {/* Left: Logo */}
           <div className="flex items-center">
             <Link to="/">
-            <img src="/src/assets/logo-main.png" alt="SkyPlane" className="h-12 w-36" />
+            <img src="/assets/logo-main.png" alt="SkyPlane" className="h-12 w-36" />
             </Link>
           </div>
 

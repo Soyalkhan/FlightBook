@@ -6,7 +6,7 @@ const Banner = () => {
     <div className="p-6 md:p-10">
     <div className="relative bg-cover bg-center rounded-[30px] overflow-hidden shadow-lg"
          style={{
-           backgroundImage: `url('/src/assets/planimagebanner.jpg')`,
+           backgroundImage: `url('/assets/planimagebanner.jpg')`,
            minHeight: '600px',
          }}
     >

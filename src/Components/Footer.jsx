@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start">
         {/* Logo Section */}
         <div>
-        <img src="/src/assets/logo-main.png" alt="SkyPlane" className="h-12 w-36" />
+        <img src="/assets/logo-main.png" alt="SkyPlane" className="h-12 w-36" />
         </div>
 
        

@@ -8,7 +8,7 @@ const hotels = [
     location: "New York, USA",
     rating: 4.5,
     price: "$200/night",
-    image: "/src/assets/h1.jpg",
+    image: "/assets/h1.jpg",
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const hotels = [
     location: "Miami, USA",
     rating: 4.7,
     price: "$250/night",
-    image: "/src/assets/h2.jpg",
+    image: "/assets/h2.jpg",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const hotels = [
     location: "Denver, USA",
     rating: 4.3,
     price: "$180/night",
-    image: "/src/assets/h3.jpg",
+    image: "/assets/h3.jpg",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const hotels = [
     location: "Los Angeles, USA",
     rating: 4.6,
     price: "$220/night",
-    image: "/src/assets/h4.jpg",
+    image: "/assets/h4.jpg",
   },
   {
     id: 5,
@@ -40,7 +40,7 @@ const hotels = [
     location: "Los Angeles, USA",
     rating: 4.6,
     price: "$220/night",
-    image: "/src/assets/h5.jpg",
+    image: "/assets/h5.jpg",
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ const hotels = [
     location: "Los Angeles, USA",
     rating: 4.6,
     price: "$220/night",
-    image: "/src/assets/h6.jpg",
+    image: "/assets/h6.jpg",
   },
   {
     id:7,
@@ -56,7 +56,7 @@ const hotels = [
     location: "Los Angeles, USA",
     rating: 4.6,
     price: "$220/night",
-    image: "/src/assets/h7.jpg",
+    image: "/assets/h7.jpg",
   },
   {
     id: 8,
@@ -64,7 +64,7 @@ const hotels = [
     location: "Los Angeles, USA",
     rating: 4.6,
     price: "$220/night",
-    image: "/src/assets/h8.jpg",
+    image: "/assets/h8.jpg",
   },
   {
     id: 9,
@@ -72,7 +72,7 @@ const hotels = [
     location: "Los Angeles, USA",
     rating: 4.6,
     price: "$220/night",
-    image: "/src/assets/h9.jpg",
+    image: "/assets/h9.jpg",
   },
   {
     id: 10,
@@ -80,7 +80,7 @@ const hotels = [
     location: "Los Angeles, USA",
     rating: 4.6,
     price: "$220/night",
-    image: "/src/assets/h10.jpg",
+    image: "/assets/h10.jpg",
   },
 ];
 
@@ -90,7 +90,7 @@ const Hotels = () => {
       {/* Banner */}
       <div
         className="relative bg-cover bg-center h-[400px] md:h-[500px] flex items-center justify-center text-white"
-        style={{ backgroundImage: "url('/src/assets/hotelbanner.jpg')" }}
+        style={{ backgroundImage: "url('/assets/hotelbanner.jpg')" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center">
