@@ -14,29 +14,28 @@ const Header = () => {
               <img
                 src="/assets/logo-main.png"
                 alt="SkyPlane"
-                className="h-12 w-36"
+                className="h-10 w-32"
               />
             </Link>
           </div>
 
           {/* Right: Desktop Menu */}
           <div className="hidden md:flex space-x-6 items-center">
-            <Link to="/hotels" className="text-gray-600">
+            {/* <Link to="/hotels" className="text-gray-600">
               <div className="flex items-center space-x-2">
                 <FaHotel className="text-lg text-gray-600" />
-
                 <span className="text-gray-600">Hotels</span>
               </div>
-            </Link>
+            </Link> */}
             <Link to="/">
-              <div className="flex items-center space-x-2">
+              {/* <div className="flex items-center space-x-2">
                 <FaPlane className="text-lg text-gray-600" />
                 <span className="text-gray-600">Flights</span>
-              </div>
+              </div> */}
             </Link>
             <Link to="/contact-us">
               <button className="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700">
-                Contact
+                CONNECT
               </button>
             </Link>
           </div>

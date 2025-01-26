@@ -15,7 +15,7 @@ const Banner = () => {
 
       {/* Content */}
       <div className="relative flex flex-col justify-center items-center h-full px-4 md:px-10 text-center text-white">
-        <h1 className="text-[3.2rem] md:text-[3.2rem] font-bold mb-6 mt-44 ">
+        <h1 className="text-[3.2rem] md:text-[3.2rem] font-bold mb-6 mt-28 ">
           Best deals are waiting for you
         </h1>
       </div>

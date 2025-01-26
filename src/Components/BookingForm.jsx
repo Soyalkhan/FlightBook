@@ -57,7 +57,7 @@ Date of Enquiry: ${enquiryDate}`;
     <div className="p-6 md:p-10 relative mx-auto">
       <div
         className="relative bg-white rounded-[30px] p-6 w-full max-w-6xl shadow-lg mx-auto flex flex-col"
-        style={{ marginTop: "calc(10% - 20.5rem)" }}
+        style={{ marginTop: "calc(1% - 20.5rem)" }}
       >
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 justify-center">
           {/* Trip Type */}
