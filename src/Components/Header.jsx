@@ -9,7 +9,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Left: Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center ml-8">
             <Link to="/">
               <img
                 src="/assets/logo-main.png"
@@ -47,7 +47,7 @@ const Header = () => {
               className="text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-600"
             >
               <svg
-                className="h-6 w-6"
+                className="h-8 w-8 text-[#009488] mr-8"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"

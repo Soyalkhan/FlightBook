@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
@@ -14,9 +15,34 @@ import ScrollToTop from "./Components/ScrollToTop";
 import TermsAndConditions from "./Components/TermsAndConditions";
 import FAQ from "./Components/FAQ";
 import DataPolicy from "./Components/DataPolicy";
-
+import HeroSection from "./Components/Hero-section";
+import loaderGif from "./assets/Airplane_loader.gif";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Change the delay as needed
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="w-screen h-screen flex items-center justify-center bg-white fixed inset-0 z-[9999]">
+      <img
+        src={loaderGif}
+        alt="Loading..."
+        className="w-[1900px] h-[1500px] object-contain"
+      />
+    </div>
+    
+    );
+  }
+  
+
   return (
     <Router>
       <ScrollToTop />
@@ -26,25 +52,20 @@ function App() {
           path="/"
           element={
             <>
-              <Banner />
+              {/* <Banner /> */}
+              <HeroSection />
               <BannerBottom />
               <PopularRoutes />
               <Assurance />
               <Testimonial />
-             
             </>
           }
         />
-
-
         <Route path="/hotels" element={<Hotels />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/termsandconditions" element={<TermsAndConditions />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/data-policy" element={<DataPolicy />} />
-        {/* <Route path="/flights" element={<flights />} /> */}
-
-        {/* Catch-all route for undefined paths */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
