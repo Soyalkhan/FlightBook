@@ -78,7 +78,7 @@ const TestimonialSlider = () => {
   return (
     <div className="p-8 md:p-16 bg-gray-50 ">
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
-        OUR CUSTOMER REVIEWS
+        What Our Customers Say
       </h2>
       <Slider {...settings}>
         {reviews.map((review) => (

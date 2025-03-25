@@ -34,7 +34,7 @@ const Header = () => {
               </div> */}
             </Link>
             <Link to="/contact-us">
-              <button className="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700">
+              <button className="px-4 py-2 bg-teal-600 text-white rounded-full hover:bg-teal-700">
                 CONNECT
               </button>
             </Link>

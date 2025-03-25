@@ -26,7 +26,7 @@ const Footer = () => {
             {/* <a href="#" className="p-2 bg-white text-teal-600 rounded-full hover:bg-gray-200">
               <FaTwitter />
             </a> */}
-            <a href="#" className="p-2 bg-white text-teal-600 rounded-full hover:bg-gray-200">
+            <a href="https://wa.me/917535964612" className="p-2 bg-white text-teal-600 rounded-full hover:bg-gray-200">
               <FaWhatsapp />
             </a>
           </div>

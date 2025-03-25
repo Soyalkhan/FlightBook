@@ -1,10 +1,13 @@
 import React from "react";
+import LiveChatButton from "../Components/LiveChatButton";
 
 const BannerBottom = () => {
   return (
-    <div className="pl-10 pr-10 pb-10">
 
-<div
+    <>
+     <div className="pl-10 pr-10 pb-10">
+
+    <div
       className="relative bg-cover bg-center rounded-[30px] overflow-hidden shadow-md p-6 md:p-16"
       style={{
         backgroundImage: "url('/assets/banner2.jpg')", // Replace with the actual image path
@@ -30,6 +33,14 @@ const BannerBottom = () => {
       </div>
     </div>
     </div>
+    <LiveChatButton/>
+    {/* <div className="flex justify-center items-center">
+    <button className=" flex gap-3 justify-center items-center  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+      Live chat with Agent on WhatsApp  <MessageCircleMore  size={24} />
+    </button>
+    </div> */}
+    </>
+   
 
   );
 };

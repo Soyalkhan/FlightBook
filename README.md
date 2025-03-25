@@ -1,8 +1,21 @@
-# React + Vite
+# Flyanza
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Flyanza is a web application that allows customers to book flight tickets at cheaper rates and chat with support using live chat.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Book flight tickets at cheaper rates
+* Live chat with support
+* User-friendly interface
+
+## How to use
+
+1. Open the website and select the departure and arrival cities.
+2. Choose the travel dates and number of passengers.
+3. Click on "Book Now" to book the ticket.
+4. You will receive an email with the ticket details and confirmation number.
+5. You can also chat with support using the live chat feature.
+
+## Screenshots
+
+![Screenshot of the website](https://github.com/abhisheksoni27/Flyanza/blob/main/docs/images/screenshot.png)
