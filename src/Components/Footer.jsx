@@ -45,6 +45,7 @@ const Footer = () => {
           <li><Link to="data-policy" className="hover:underline">Data Policy</Link></li>
         </ul>
         <p className="text-white/70">© 2024 Flyanza. All rights reserved.</p>
+        <p className="text-white/70">Handcrafted By : <a href="https://www.linkedin.com/in/iamsoyal/" className="underline hover:text-white">SoyalKhan</a></p>
       </div>
     </footer>
     </div>
