@@ -31,15 +31,14 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="w-screen h-screen flex items-center justify-center bg-white fixed inset-0 z-[9999]">
-      <img
-        src={loaderGif}
-        alt="Loading..."
-        className="w-[1900px] h-[1500px] object-contain"
-      />
-    </div>
-    
-    );
+      <div className="w-screen h-screen flex items-center justify-center fixed inset-0 z-[9999]" style={{ backgroundColor: '#f4f4f4' }}>
+        <img
+          src={loaderGif}
+          alt="Loading..."
+          className="w-full max-w-[500px] h-auto object-contain"
+        />
+      </div>
+    )
   }
   
 
