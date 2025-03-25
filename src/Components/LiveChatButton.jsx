@@ -16,7 +16,7 @@ const LiveChatButton = () => {
     <div className="flex justify-center items-center">
       <button
         onClick={handleClick}
-        className="flex gap-3 justify-center items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+        className="flex gap-3 justify-center items-center  hover:bg-white text-[#1cef99] font-bold py-2 px-4 border-2 border-[#1cef99] rounded-full"
       >
         Live chat with Agent on WhatsApp <MessageCircleMore size={24} />
       </button>
