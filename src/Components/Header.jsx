@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaPlane, FaHotel } from "react-icons/fa";
 import { Siren } from 'lucide-react';
 import { Link } from "react-router-dom";
-import LiveChatButton from "../components/LiveChatButton";
+import LiveChatButton from "../Components/LiveChatButton";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
