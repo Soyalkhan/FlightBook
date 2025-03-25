@@ -18,4 +18,8 @@ Flyanza is a web application that allows customers to book flight tickets at che
 
 ## Screenshots
 
-![Screenshot of the website](https://github.com/abhisheksoni27/Flyanza/blob/main/docs/images/screenshot.png)
+![Screenshot of the website](https://github.com/Soyalkhan//Flyanza/Showcase_Images/ss1.png)
+![Screenshot of the website](https://github.com/Soyalkhan//Flyanza/Showcase_Images/ss2.png)
+![Screenshot of the website](https://github.com/Soyalkhan//Flyanza/Showcase_Images/ss3.png)
+![Screenshot of the website](https://github.com/Soyalkhan//Flyanza/Showcase_Images/ss4.png)
+![Screenshot of the website](https://github.com/Soyalkhan//Flyanza/Showcase_Images/ss5.png)
