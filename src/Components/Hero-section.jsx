@@ -706,7 +706,7 @@ ${tripType === "round-trip" ? `*Return Date:* ${returnDate ? format(returnDate, 
       <div
         className="relative w-full h-[400px] md:h-[500px] bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&q=80')`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('/assets/bg-hero.jpeg')`,
         }}
       >
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4">
