@@ -16,8 +16,8 @@ export default function Header() {
 
   const navLinks = [
     { href: "/about-us", label: "About Us", isRoute: true },
-    { href: "#reviews", label: "Reviews", isRoute: false },
-    { href: "#book", label: "Book Now", isRoute: false },
+    { href: "/#reviews", label: "Reviews", isRoute: false },
+    { href: "/#book", label: "Book Now", isRoute: false },
   ]
 
   return (
@@ -65,7 +65,7 @@ export default function Header() {
           {/* Mobile Book Button & Menu Button */}
           <div className="flex items-center gap-3 md:hidden">
             <a
-              href="#book"
+              href="/#book"
               className="px-4 py-2 bg-white text-[#009688] rounded font-semibold text-sm hover:bg-white/90 transition-colors"
             >
               Book
