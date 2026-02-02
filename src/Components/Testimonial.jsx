@@ -206,14 +206,14 @@ const TestimonialSlider = () => {
       </h2>
       <Slider {...settings}>
         {reviews.map((review) => (
-          <div key={review.id} className="px-3 mb-4">
-            <div className="bg-white rounded-lg shadow-md p-6 h-48 flex flex-col">
-              <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
+          <div key={review.id} className="px-2 md:px-3 mb-4">
+            <div className="bg-white rounded-lg shadow-md p-4 md:p-6 min-h-[180px] md:h-48 flex flex-col">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 flex items-center gap-2">
                 {review.name}
                 <FaCheckCircle className="text-blue-500 text-sm" title="Verified Customer" />
               </h3>
-              <div className="flex items-center mb-3">{renderStars(review.rating)}</div>
-              <p className="text-gray-600 flex-1 line-clamp-3">{review.review}</p>
+              <div className="flex items-center mb-2 md:mb-3">{renderStars(review.rating)}</div>
+              <p className="text-gray-600 text-sm md:text-base flex-1 line-clamp-4 md:line-clamp-3">{review.review}</p>
             </div>
           </div>
         ))}
