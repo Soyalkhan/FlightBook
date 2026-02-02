@@ -2,7 +2,7 @@ import { MessageCircleMore } from "lucide-react";
 
 const LiveChatButton = () => {
   const handleClick = () => {
-    const phone = "917535964612"; // Country code + number
+    const phone = "919625072091"; // Country code + number
     const now = new Date();
     const date = now.toLocaleDateString();
     const time = now.toLocaleTimeString();

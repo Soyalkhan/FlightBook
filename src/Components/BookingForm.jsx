@@ -47,7 +47,7 @@ ${
 }Passengers: ${passengers}
 Date of Enquiry: ${enquiryDate}`;
 
-    const whatsappUrl = `https://wa.me/7535964612?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/919625072091?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, "_blank");
 
     setMessage("Enquiry sent successfully!");

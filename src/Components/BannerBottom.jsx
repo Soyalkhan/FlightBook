@@ -33,7 +33,7 @@ const BannerBottom = () => {
       </div>
     </div>
     </div>
-    <LiveChatButton/>
+    {/* <LiveChatButton/> */}
     {/* <div className="flex justify-center items-center">
     <button className=" flex gap-3 justify-center items-center  bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
       Live chat with Agent on WhatsApp  <MessageCircleMore  size={24} />

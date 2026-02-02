@@ -16,6 +16,9 @@ import TermsAndConditions from "./Components/TermsAndConditions";
 import FAQ from "./Components/FAQ";
 import DataPolicy from "./Components/DataPolicy";
 import HeroSection from "./Components/Hero-section";
+import RefundAndCancellation from "./Components/RefundAndCancellation";
+import PrivacyPolicy from "./Components/PrivacyPolicy";
+import AboutUs from "./Components/AboutUs";
 import loaderGif from "./assets/Airplane_loader.gif";
 
 function App() {
@@ -64,7 +67,11 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/termsandconditions" element={<TermsAndConditions />} />
         <Route path="/faq" element={<FAQ />} />
+        
         <Route path="/data-policy" element={<DataPolicy />} />
+        <Route path="/refundandcancallations" element={<RefundAndCancellation />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

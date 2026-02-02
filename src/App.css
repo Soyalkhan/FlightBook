@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
 .custom-scrollbar {
     max-height: 200px;
     overflow-y: auto;
@@ -25,8 +30,12 @@
     background: #555;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1 {
     font-family: 'Playfair Display', serif;
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
   }
   
 body{

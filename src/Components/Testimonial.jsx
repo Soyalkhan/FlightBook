@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-
+import LiveChatButton from "../Components/LiveChatButton";
 const TestimonialSlider = () => {
   const reviews = [
     {
@@ -58,41 +58,47 @@ const TestimonialSlider = () => {
   };
 
   const settings = {
-    dots: false, // Hide navigation dots
+    dots: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 2, // Show 2 slides in desktop
+    speed: 800,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000, // Auto-slide every 5 seconds
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    cssEase: "ease-in-out",
     responsive: [
       {
-        breakpoint: 768, // Mobile breakpoint
+        breakpoint: 768,
         settings: {
-          slidesToShow: 1, // Show 1 slide in mobile
+          slidesToShow: 1,
         },
       },
     ],
   };
 
   return (
-    <div className="p-8 md:p-16 bg-gray-50 ">
+
+    <>
+    <LiveChatButton/>
+        <div className="p-8 md:p-16 bg-gray-50 " id="reviews">
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
         What Our Customers Say
       </h2>
       <Slider {...settings}>
         {reviews.map((review) => (
-          <div
-            key={review.id}
-            className="p-6 mx-4 bg-gray-50  shadow-md "
-          >
-            <h3 className="text-xl font-semibold mb-2">{review.name}</h3>
-            <div className="flex items-center mb-4">{renderStars(review.rating)}</div>
-            <p className="text-gray-600">{review.review}</p>
+          <div key={review.id} className="px-3 mb-4">
+            <div className="bg-white rounded-lg shadow-md p-6 h-48 flex flex-col">
+              <h3 className="text-xl font-semibold mb-2">{review.name}</h3>
+              <div className="flex items-center mb-3">{renderStars(review.rating)}</div>
+              <p className="text-gray-600 flex-1 line-clamp-3">{review.review}</p>
+            </div>
           </div>
         ))}
       </Slider>
     </div>
+    </>
+
   );
 };
 
