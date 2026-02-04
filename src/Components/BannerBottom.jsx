@@ -20,15 +20,13 @@ const BannerBottom = () => {
       {/* Content */}
       <div className="relative z-10 text-white flex flex-col justify-center items-start h-full">
         <h2 className="text-xl md:text-2xl font-bold mb-2">
-          Get our new mobile app and book flights with 10% discount!
+          Get the Cheapest Flight Bookings with Unbeatable Deals!
         </h2>
         <p className="mb-4 text-sm md:text-base">
-          Download our new SkyPlane app and have control of your trips in your
-          pocket. With our app you’ll get secret deals and extra booking
-          discounts.
+          Find the lowest fares to destinations worldwide. We compare prices from hundreds of airlines to bring you the best deals on every trip.
         </p>
         <button className="bg-white text-black py-2 px-4 rounded-md hover:bg-gray-200">
-         Affordable than you think
+         Book Now & Save Big
         </button>
       </div>
     </div>
